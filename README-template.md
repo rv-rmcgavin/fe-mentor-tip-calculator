@@ -54,6 +54,24 @@ Then crop/optimize/edit your image however you like, add it to your project, and
   - I'll put it in the request in [_document.tsx](./pages/_document.tsx) anyways and just see what happens.
 - Clean up [index.tsx](./page/index.tsx). 
   - Delete the css module stuff. I won't be using it.
+- Delete `./styles/Home.module.css`
+- Install [Styled Components](https://styled-components.com/)
+  - `npm install --save styled-components`.
+- Set up global styles file using styled-components.
+  - [global.ts](./styles/global.ts)
+- SURPRISE: I need to get the types for styled-components now by running `npm install --save @types/styled-components`.
+- No surprise: I have untyped `theme`, `colors`, and `breakpoint` variables in [global.ts](./styles/global.ts).
+- I read styled-components's TypeScript [documentation](https://styled-components.com/docs/api#typescript).
+- Ok cool so according to ☝️ I need to create a declarations file, extend the default theme, and create a theme. 
+- I read TypeScript's documentation on [declaration files](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html)
+- Eventually I realize I just need to make folders and files at `@types/styled.d.ts` and `/styles/theme.ts`.
+- I set up [@types/styled.d.ts](@types/styled.d.ts) and [/styles/theme.ts](/styles/theme.ts).
+  - The theme and the type declaration file seem to check out, but I am having some problems with [/styles/global.ts](/styles/global.ts).
+  - I am getting an error `Property 'primary' does not exist on type '{}'`.
+  - I resolved this by removing the default values `theme` and `colors`.
+  - Typically I write these as `theme = {}` and `colors = {}`. It's a practice I've gotten used to when writing React because you don't want your app to crash if it tries to call `.length()` for example on `undefined`, completely halting a user who is unlucky enough to get this error. It also is often just needed because not all data is ready at one time in react, so we have defaults that get used and then new data causes rerenders until we get what we want. Without the default though, it just stops. I'm curious to see if using TypeScript somehow is going to give default values where needed, or if there is a different way to write your types with defaults that won't causes the error above.
+- Ok Boom! Add the `<ThemeProvider>` and `<GlobalStyle />` components to `/pages/_app.tsx` and we complete setting up styled-components with TypeScript.
+  - It was all mostly harmless too. How about that.
 
 ### Built with
 
