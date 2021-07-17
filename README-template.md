@@ -52,6 +52,8 @@ Then crop/optimize/edit your image however you like, add it to your project, and
   - The [style-guide.md](./style-guide.md) file say we will need font weights 400, 500, and 700. However, [google fonts](https://fonts.google.com/specimen/Space+Mono?query=space+mono) says you can only get 400 and 700.
   - Thanks for the curveball [Frontend Mentor](https://frontendmentor.io).
   - I'll put it in the request in [_document.tsx](./pages/_document.tsx) anyways and just see what happens.
+- Clean up [index.tsx](./page/index.tsx). 
+  - Delete the css module stuff. I won't be using it.
 
 ### Built with
 
