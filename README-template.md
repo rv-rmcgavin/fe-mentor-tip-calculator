@@ -81,6 +81,8 @@ Then crop/optimize/edit your image however you like, add it to your project, and
     - The dollar tip amount per person - Number
     - The dollar total amount per person - Number
 - Build out a mobile mockup with no functionality simply to achieve the mobile design.
+- I did that, and then it became very easy to figure out how to just do it with all the values. It's nearly done now. Not much left but the tweaks.
+- Break down Calculator component in to separate components: Bill, TipPercent, People, Display(output).
 
 ### Built with
 
@@ -92,7 +94,6 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - [React](https://reactjs.org/) - JS library
 - [Next.js](https://nextjs.org/) - React framework
 - [Styled Components](https://styled-components.com/) - For styles
-- [React-Spring](https://react-spring.io/) - React spring physics animation library
 
 **Note: These are just examples. Delete this note and replace the list above with your own choices**
 
