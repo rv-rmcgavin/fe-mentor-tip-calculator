@@ -72,6 +72,15 @@ Then crop/optimize/edit your image however you like, add it to your project, and
   - Typically I write these as `theme = {}` and `colors = {}`. It's a practice I've gotten used to when writing React because you don't want your app to crash if it tries to call `.length()` for example on `undefined`, completely halting a user who is unlucky enough to get this error. It also is often just needed because not all data is ready at one time in react, so we have defaults that get used and then new data causes rerenders until we get what we want. Without the default though, it just stops. I'm curious to see if using TypeScript somehow is going to give default values where needed, or if there is a different way to write your types with defaults that won't causes the error above.
 - Ok Boom! Add the `<ThemeProvider>` and `<GlobalStyle />` components to `/pages/_app.tsx` and we complete setting up styled-components with TypeScript.
   - It was all mostly harmless too. How about that.
+- Gather inputs and outputs for this app:
+  - Inputs:
+    - Total Bill - Number
+    - Percentage of - Number
+    - Number of people to split with - Number
+  - Outputs:
+    - The dollar tip amount per person - Number
+    - The dollar total amount per person - Number
+- Build out a mobile mockup with no functionality simply to achieve the mobile design.
 
 ### Built with
 

@@ -91,25 +91,33 @@ const GlobalStyle = createGlobalStyle`
       body {
         font-family: "Space Mono", sans-serif;
         font-size: 0.8125rem; /* 13px */
-        height: 100%;
+        min-height: 100%;
         margin: 0;
         padding: 0;
       }
 
       #__next {
-        height: 100%;
+        min-height: 100%;
       }
 
       .App {
-        height: 100%;
+        min-height: 100%;
       }
 
       main {
-        height: 100%;
+        min-height: 100%;
       }
 
       body {
-        background-color: ${colors.primary};
+        background-color: ${colors.neutral['300']};
+      }
+
+      h1 {
+        color: ${colors.neutral['700']};
+        letter-spacing: 12px;
+        padding: 50px 0 40px;
+        text-transform: uppercase;
+        text-align: center;
       }
     `;
   }}

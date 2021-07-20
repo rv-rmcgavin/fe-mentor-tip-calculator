@@ -13,6 +13,7 @@ interface Colors {
   primary: string;
   neutral: Neutral;
   white: string;
+  gray: string;
 }
 
 // and extend them!

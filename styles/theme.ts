@@ -10,7 +10,8 @@ export const theme: DefaultTheme = {
       300: 'hsl(185, 41%, 84%)',
       100: 'hsl(189, 41%, 97%)'
     },
-    white: 'hsl(0, 0%, 100%)'
+    white: 'hsl(0, 0%, 100%)',
+    gray: 'hsl(202, 50%, 95.5%)',
 
   },
   breakpoint: `(min-width: 900px)`
