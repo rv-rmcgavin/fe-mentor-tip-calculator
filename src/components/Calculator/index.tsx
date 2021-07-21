@@ -20,6 +20,13 @@ const Calculator = () => {
     [numOfPeople, setNumOfPeople]:
       [numOfPeople: number, setNumOfPeople: React.Dispatch<React.SetStateAction<number>>] = useState(1);
 
+  const handleReset = (): void => {
+    setBill(0);
+    setActivePercentIndex(-1);
+    setCustomPercent("");
+    setNumOfPeople(1);
+  }
+
   return (
     <CalculatorStyled>
       <Bill bill={bill} setBill={setBill} />
@@ -35,6 +42,7 @@ const Calculator = () => {
         activePercentIndex={activePercentIndex}
         customPercent={customPercent}
         numOfPeople={numOfPeople}
+        handleReset={handleReset}
       />
     </CalculatorStyled>
   )

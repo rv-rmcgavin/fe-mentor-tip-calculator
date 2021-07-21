@@ -1,28 +1,12 @@
 import DisplayStyled from "./DisplayStyled";
-import { TIP_PERCENT } from "../../constants";
+import { getLineItems } from "../../util";
 
 const Display = (
-  { bill, activePercentIndex, customPercent, numOfPeople }:
-    { bill: number, activePercentIndex: number, customPercent: string, numOfPeople: number }
+  { bill, activePercentIndex, customPercent, numOfPeople, handleReset }:
+    { bill: number, activePercentIndex: number, customPercent: string, numOfPeople: number, handleReset: () => void }
 ) => {
-  // TODO: Most of this should probably be abstracted a way to a function that returns just my final array of objects `lineItemData`
-  const tipPercentage: number = TIP_PERCENT[activePercentIndex] || Number(customPercent) || 0;
-  const tipDecimal: number = tipPercentage / 100;
-  const tipTotal: number = bill * tipDecimal;
-  const tipPerPerson: number = tipTotal / numOfPeople;
-  const totalPerPerson: number = (bill + tipTotal) / numOfPeople;
-  const displayTipPerPerson: string = tipPerPerson.toFixed(2);
-  const displayTotalPerPerson: string = totalPerPerson.toFixed(2);
-  const lineItemData: { label: string, amount: string }[] = [
-    {
-      label: 'Tip amount',
-      amount: displayTipPerPerson,
-    },
-    {
-      label: 'Total',
-      amount: displayTotalPerPerson,
-    },
-  ];
+  const lineItemData: { label: string, amount: string }[] = getLineItems({ bill, activePercentIndex, customPercent, numOfPeople });
+
   return (
     <DisplayStyled>
       {lineItemData.map((item) => (
@@ -34,7 +18,7 @@ const Display = (
           <div className="amount">${item.amount}</div>
         </div>
       ))}
-      <input type="button" value="Reset" />
+      <input type="button" value="Reset" onClick={handleReset} />
     </DisplayStyled>
   )
 };

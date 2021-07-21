@@ -83,13 +83,14 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Build out a mobile mockup with no functionality simply to achieve the mobile design.
 - I did that, and then it became very easy to figure out how to just do it with all the values. It's nearly done now. Not much left but the tweaks.
 - Break down Calculator component in to separate components: Bill, TipPercent, People, Display(output).
+- Write reset function that I forgot about.
+- Write function to get all my line item data.
 
 ### Built with
 
 - Mobile-first workflow
 - Semantic HTML5 markup - _sure why not say this?_
 - Flexbox
-- CSS Grid
 - [TypeScript](https://www.typescriptlang.org/) - Types for JS
 - [React](https://reactjs.org/) - JS library
 - [Next.js](https://nextjs.org/) - React framework
@@ -109,8 +110,8 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [TypeScript Docs](https://www.typescriptlang.org/) - Official TypeScript docs. Helped in particular with declaring types for objects. 
+- [TypeScript Docs for styled-components](https://styled-components.com/docs/api#typescript) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 
 **Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
