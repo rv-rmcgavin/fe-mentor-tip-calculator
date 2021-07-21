@@ -85,6 +85,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Break down Calculator component in to separate components: Bill, TipPercent, People, Display(output).
 - Write reset function that I forgot about.
 - Write function to get all my line item data.
+- Update styled components to use the DefaultTheme interface.
 
 ### Built with
 

@@ -1,7 +1,7 @@
-import styled, { css } from 'styled-components';
+import styled, { css, DefaultTheme } from 'styled-components';
 
 const DisplayStyled = styled.div`
-${({ theme }) => {
+${({ theme }: { theme: DefaultTheme }) => {
     const { colors } = theme;
 
     return css`

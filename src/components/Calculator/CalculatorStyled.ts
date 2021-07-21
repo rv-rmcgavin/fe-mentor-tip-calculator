@@ -1,7 +1,7 @@
-import styled, { css } from 'styled-components';
+import styled, { css, DefaultTheme } from 'styled-components';
 
 const CalculatorStyled = styled.div`
-  ${({ theme }) => {
+  ${({ theme }: { theme: DefaultTheme }) => {
     const { colors } = theme;
     return css`
       background: ${colors.white};
@@ -11,7 +11,7 @@ const CalculatorStyled = styled.div`
       &>div:not(:last-child) {
         margin-bottom: 32px;
       }
-      
+
       label {
         color: ${colors.neutral['500']};
         display: block;
@@ -47,10 +47,12 @@ const CalculatorStyled = styled.div`
         color: ${colors.white};
         font-size: 1.25rem;
       }
+
       .per {
         color: ${colors.neutral['500']};
         font-size: 1rem;
       }
+
       .amount {
         color: ${colors.primary};
         font-size: 2.5rem;
