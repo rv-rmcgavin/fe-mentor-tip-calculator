@@ -29,14 +29,16 @@ const Calculator = () => {
 
   return (
     <CalculatorStyled>
-      <Bill bill={bill} setBill={setBill} />
-      <TipPercent
-        setCustomPercent={setCustomPercent}
-        setActivePercentIndex={setActivePercentIndex}
-        activePercentIndex={activePercentIndex}
-        customPercent={customPercent}
-      />
-      <People numOfPeople={numOfPeople} setNumOfPeople={setNumOfPeople} />
+      <div>
+        <Bill bill={bill} setBill={setBill} />
+        <TipPercent
+          setCustomPercent={setCustomPercent}
+          setActivePercentIndex={setActivePercentIndex}
+          activePercentIndex={activePercentIndex}
+          customPercent={customPercent}
+        />
+        <People numOfPeople={numOfPeople} setNumOfPeople={setNumOfPeople} />
+      </div>
       <Display
         bill={bill}
         activePercentIndex={activePercentIndex}

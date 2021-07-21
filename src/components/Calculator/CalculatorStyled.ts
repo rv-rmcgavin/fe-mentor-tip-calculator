@@ -2,14 +2,32 @@ import styled, { css, DefaultTheme } from 'styled-components';
 
 const CalculatorStyled = styled.div`
   ${({ theme }: { theme: DefaultTheme }) => {
-    const { colors } = theme;
+    const { colors, breakpoint } = theme;
     return css`
       background: ${colors.white};
-      border-radius: 20px 20px 0 0;
+      border-radius: 20px;
+      max-width: 375px;
+      margin: 0 auto;
       height: 100%;
       padding: 40px 24px 32px;
+
+      @media ${breakpoint} {
+        display: flex;
+        gap: 40px;
+        max-width: 825px;
+      }
+
+      &> div {
+        @media ${breakpoint} {
+          flex 1 1 calc(50% - 40px);
+        }
+      }
+
       &>div:not(:last-child) {
         margin-bottom: 32px;
+        @media ${breakpoint} {
+          margin-bottom: 0;
+        }
       }
 
       label {
@@ -30,33 +48,6 @@ const CalculatorStyled = styled.div`
         padding: 8px 16px;
         text-align: right;
         width: 100%;
-      }
-
-      .output {
-        background-color: ${colors.neutral['900']};
-        border-radius: 16px;
-        padding: 48px 24px 24px;
-      }
-
-      .line-item {
-        display: flex;
-        justify-content: space-between;
-      }
-
-      .label {
-        color: ${colors.white};
-        font-size: 1.25rem;
-      }
-
-      .per {
-        color: ${colors.neutral['500']};
-        font-size: 1rem;
-      }
-
-      .amount {
-        color: ${colors.primary};
-        font-size: 2.5rem;
-        font-weight: 700;
       }
     `;
   }}

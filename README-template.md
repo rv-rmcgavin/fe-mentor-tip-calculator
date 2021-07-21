@@ -86,7 +86,13 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Write reset function that I forgot about.
 - Write function to get all my line item data.
 - Update styled components to use the DefaultTheme interface.
+- Style it for Desktop.
 
+Things Left:
+- Set up the correct active states styling.
+- Tweak some final styles. Particularly vertical spacing between elements.
+- Add icons to the inputs
+- Add ability to disable reset button
 ### Built with
 
 - Mobile-first workflow

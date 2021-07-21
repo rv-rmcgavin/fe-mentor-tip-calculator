@@ -18,7 +18,7 @@ const Display = (
           <div className="amount">${item.amount}</div>
         </div>
       ))}
-      <input type="button" value="Reset" onClick={handleReset} />
+      <input className="reset" type="button" value="Reset" onClick={handleReset} />
     </DisplayStyled>
   )
 };
