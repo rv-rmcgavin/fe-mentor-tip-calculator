@@ -1,8 +1,8 @@
 import { TIP_PERCENT } from "./constants";
+import { Calculator } from "../@types/calculator";
 
 export const getLineItems = (
-  { activePercentIndex, customPercent, bill, numOfPeople }:
-    { activePercentIndex: number, customPercent: string, bill: number, numOfPeople: number }
+  { activePercentIndex, customPercent, bill, numOfPeople }: Calculator
 ): { label: string, amount: string }[] => {
   const tipPercentage: number = TIP_PERCENT[activePercentIndex] || Number(customPercent) || 0;
   const tipDecimal: number = tipPercentage / 100;

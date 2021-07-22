@@ -1,10 +1,8 @@
+import { Calculator } from "../../../@types/calculator";
 import DisplayStyled from "./DisplayStyled";
 import { getLineItems } from "../../util";
 
-const Display = (
-  { bill, activePercentIndex, customPercent, numOfPeople, handleReset }:
-    { bill: number, activePercentIndex: number, customPercent: string, numOfPeople: number, handleReset: () => void }
-) => {
+const Display = ({ bill, activePercentIndex, customPercent, numOfPeople, handleReset }: Calculator) => {
   const lineItemData: { label: string, amount: string }[] = getLineItems({ bill, activePercentIndex, customPercent, numOfPeople });
   const isDisabled: boolean = !bill && activePercentIndex < 0 && !customPercent && numOfPeople === 1;
   return (
