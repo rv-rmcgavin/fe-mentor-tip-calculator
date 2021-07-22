@@ -12,7 +12,7 @@ const TipPercent = ({ setCustomPercent, setActivePercentIndex, activePercentInde
 
   const handleCustomPercent = (event: React.BaseSyntheticEvent): void => {
     const num: number = Number(event.target.value);
-    if (num >= 0 && num <= 100) setCustomPercent(event.target.value);
+    if (num >= 1 && num <= 100) setCustomPercent(event.target.value);
   }
 
   return (

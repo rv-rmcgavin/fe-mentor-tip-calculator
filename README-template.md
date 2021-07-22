@@ -92,9 +92,9 @@ Then crop/optimize/edit your image however you like, add it to your project, and
   - Used a psuedo element on the label, url encoded the svg, and put it on a `background-image` property.
   - I got to use my [alfred-svg](https://github.com/rickMcGavin/alfred-svg) workflow. It's been ages since I used that.
 - Set up the correct active states styling.
+- Add ability to disable reset button
 
 Things Left:
-- Add ability to disable reset button
 - Set up [eslint airbnb eslint config](https://www.npmjs.com/package/eslint-config-airbnb-typescript)
 ### Built with
 

@@ -51,6 +51,11 @@ ${({ theme }: { theme: DefaultTheme }) => {
         border-radius: 5px;
         margin-top: auto;
         text-align: center;
+        text-transform: uppercase;
+
+        &:disabled {
+          background-color: ${colors.neutral['200']};
+        }
       }
     `;
   }}

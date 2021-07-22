@@ -7,6 +7,8 @@ interface Neutral {
   500: string;
   300: string;
   100: string;
+  50: string;
+  200: string;
 }
 
 interface Colors {

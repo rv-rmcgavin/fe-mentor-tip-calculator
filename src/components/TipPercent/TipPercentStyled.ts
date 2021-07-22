@@ -26,6 +26,17 @@ ${({ theme }: { theme: DefaultTheme }) => {
         color: ${colors.white};
         text-align: center;
 
+        &:hover {
+          background-color: ${colors.neutral['50']};
+          color: ${colors.neutral['900']};
+        }
+
+        &:active,
+        &:focus {
+          background-color: ${colors.primary};
+          color: ${colors.neutral['900']};
+        }
+
         &--active {
           background-color: ${colors.primary};
           color: ${colors.neutral['900']};

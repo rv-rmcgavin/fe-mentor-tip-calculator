@@ -56,8 +56,10 @@ const CalculatorStyled = styled.div`
         border: none;
         border-radius: 8px;
         color: ${colors.neutral['900']};
+        cursor: pointer;
         font-size: 1.5rem;
         font-weight: 700;
+        outline-color: ${colors.primary};
         padding: 8px 16px;
         text-align: right;
         width: 100%;

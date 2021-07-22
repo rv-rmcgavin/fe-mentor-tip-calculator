@@ -6,7 +6,7 @@ const Display = (
     { bill: number, activePercentIndex: number, customPercent: string, numOfPeople: number, handleReset: () => void }
 ) => {
   const lineItemData: { label: string, amount: string }[] = getLineItems({ bill, activePercentIndex, customPercent, numOfPeople });
-
+  const isDisabled: boolean = !bill && activePercentIndex < 0 && !customPercent && numOfPeople === 1;
   return (
     <DisplayStyled>
       {lineItemData.map((item) => (
@@ -18,7 +18,13 @@ const Display = (
           <div className="amount">${item.amount}</div>
         </div>
       ))}
-      <input className="reset" type="button" value="Reset" onClick={handleReset} />
+      <input
+        disabled={isDisabled}
+        className="reset"
+        type="button"
+        value="Reset"
+        onClick={handleReset}
+      />
     </DisplayStyled>
   )
 };
