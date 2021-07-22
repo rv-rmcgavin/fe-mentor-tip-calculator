@@ -29,7 +29,7 @@ const Calculator = () => {
 
   return (
     <CalculatorStyled>
-      <div>
+      <div className="controls">
         <Bill bill={bill} setBill={setBill} />
         <TipPercent
           setCustomPercent={setCustomPercent}

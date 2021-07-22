@@ -12,11 +12,17 @@ ${({ theme }: { theme: DefaultTheme }) => {
       @media ${breakpoint} {
         display: flex;
         flex-direction: column;
+        padding: 62px 40px 40px;
       }
 
       .line-item {
         display: flex;
         justify-content: space-between;
+        margin-bottom: 40px;
+
+        @media ${breakpoint} {
+          margin-bottom: 56px;
+        }
       }
 
       .label {
@@ -33,6 +39,11 @@ ${({ theme }: { theme: DefaultTheme }) => {
         color: ${colors.primary};
         font-size: 2.5rem;
         font-weight: 700;
+        line-height: 1;
+
+        @media ${breakpoint} {
+          font-size: 3.5rem;
+        }
       }
 
       .reset {

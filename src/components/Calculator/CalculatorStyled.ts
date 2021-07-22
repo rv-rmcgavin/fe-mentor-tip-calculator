@@ -14,7 +14,7 @@ const CalculatorStyled = styled.div`
       @media ${breakpoint} {
         display: flex;
         gap: 40px;
-        max-width: 825px;
+        max-width: 922px;
       }
 
       &> div {
@@ -27,6 +27,19 @@ const CalculatorStyled = styled.div`
         margin-bottom: 32px;
         @media ${breakpoint} {
           margin-bottom: 0;
+        }
+      }
+
+      .controls > div {
+        margin-bottom: 40px;
+
+        @media ${breakpoint} {
+          margin-bottom: 0;
+        }
+      }
+        .controls > div:not(:last-child) {
+        @media ${breakpoint} {
+          margin-bottom: 48px;
         }
       }
 

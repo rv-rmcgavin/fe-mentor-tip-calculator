@@ -87,12 +87,13 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Write function to get all my line item data.
 - Update styled components to use the DefaultTheme interface.
 - Style it for Desktop.
+- Tweak vertical spacing between elements.
 
 Things Left:
 - Set up the correct active states styling.
-- Tweak some final styles. Particularly vertical spacing between elements.
 - Add icons to the inputs
 - Add ability to disable reset button
+- Set up [eslint airbnb eslint config](https://www.npmjs.com/package/eslint-config-airbnb-typescript)
 ### Built with
 
 - Mobile-first workflow

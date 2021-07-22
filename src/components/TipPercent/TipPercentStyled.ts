@@ -10,13 +10,13 @@ ${({ theme }: { theme: DefaultTheme }) => {
         gap: 16px;
 
         @media ${breakpoint} {
-          gap: 8px;
+          gap: 16px;
         }
 
         input {
           flex: 1 0 calc(50% - 16px);
           @media ${breakpoint} {
-            flex: 1 0 calc(33% - 8px);
+            flex: 1 0 calc(33% - 16px);
           }
         }
       }
