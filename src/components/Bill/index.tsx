@@ -1,7 +1,9 @@
+import BillStyled from "./BillStyled";
+
 const Bill = ({ bill, setBill }: { bill: number, setBill: React.Dispatch<React.SetStateAction<number>> }) => {
   return (
-    <div className="bill">
-      <label htmlFor="bill">Bill</label>
+    <BillStyled>
+      <label htmlFor="bill" className="bill-input">Bill</label>
       <input
         type="number"
         name="bill"
@@ -9,7 +11,7 @@ const Bill = ({ bill, setBill }: { bill: number, setBill: React.Dispatch<React.S
         step="0.01"
         value={bill}
         onChange={e => setBill(Number(e.target.value))} />
-    </div>
+    </BillStyled>
   )
 };
 
