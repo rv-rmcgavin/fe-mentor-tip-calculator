@@ -31,7 +31,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/rv-rmcgavin/fe-mentor-tip-calculator](https://github.com/rv-rmcgavin/fe-mentor-tip-calculator)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://fe-mentor-tip-calculator.vercel.app/](https://fe-mentor-tip-calculator.vercel.app/)
 
 ## My process
 - Install nextjs project with `--typescript` flag.
